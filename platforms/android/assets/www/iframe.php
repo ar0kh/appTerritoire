@@ -1,3 +1,20 @@
+<?php
+
+$propertyType = $_GET["property_type"];
+$commune = $_GET["commune"];
+$type = $_GET["typehebergement"];
+
+$urlIframe = "http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10000&wpp_search%5Bstrict_search%5D=false" ;
+$urlIframe .= "&wpp_search%5Bproperty_type%5D=$propertyType";
+$urlIframe .= "&wpp_search%5Blocalisation%5D=-1";
+$urlIframe .= "&wpp_search%5Bcommune%5D=$commune";
+$urlIframe .= "&wpp_search%5Badherant_ot%5D=true";
+if ($type != '') {
+	$urlIframe .= "&wpp_search%5Btype_hebergement%5D%5B0%5D=$type";
+}
+$urlIframe .= "&view=fiche";
+?>
+
 <!DOCTYPE HTML>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -324,8 +341,15 @@
 <div id="page-content" class="page-content header-clear bg bg-cover bg-transparent">
 
     <div id="page-content-scroll">        
-                
-    <iframe src="http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10000&wpp_search%5Bstrict_search%5D=false&wpp_search%5Bproperty_type%5D=hbergement&wpp_search%5Blocalisation%5D=-1&wpp_search%5Bcommune%5D=-1&wpp_search%5Badherant_ot%5D=true&view=fiche" width="100%" height="110%" style="
+     
+   	<code><?php echo $urlIframe; ?></code>      
+    
+
+
+
+
+
+    <iframe src="<?php echo $urlIframe; ?>" width="100%" height="110%" style="
     z-index: 100;
     opacity: 1;
 "></iframe>

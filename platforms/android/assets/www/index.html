@@ -40,7 +40,10 @@
 <div class="sidebar-menu sidebar-light">
     <div class="sidebar-menu-scroll">
         <a class="current-menu" href="index.html"><i class="ion-ios-home-outline"></i><em>Accueil</em></a>       
-        <!-- <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>       
+        <!-- <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>
+        <a data-submenus="sub0" href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>       
+
+
         <a data-submenus="sub2" href="#"><i class="ion-ios-home"></i><em>Villages</em></a>      -->
         <a data-submenus="sub3" href="#"><i class="ion-ios-moon"></i><em>Hébergements</em></a>       
         <a data-submenus="sub4" href="#"><i class="ion-android-restaurant"></i><em>Restauration</em></a>
@@ -91,54 +94,223 @@
 <!-- Hebergement Submenus -->    
 <div class="submenu submenu-light" id="sub3">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>        
-        <a href="Main2Hebe.html"><i class="ion-android-search"></i><em>Tous</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Hôtels</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Campings</em></a>        
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>        
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
+        </p>   
+        <a href="iframe.php?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
+        <a href="iframe.php?property_type=hbergement&type=Résidences+de+tourisme&commune=-1"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="iframe.php?property_type=hbergement&type=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
+        <a href="iframe.php?property_type=hbergement&type=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
+        <a href="iframe.php?property_type=hbergement&type=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
+        <a href="iframe.php?property_type=hbergement&type=Chambres+d’hôtes&commune=-1"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>               
+        <a href="iframe.php?property_type=hbergement&type=Campings&commune=-1"><i class="ion-android-search"></i><em>Campings</em></a>        
     </div>
 </div>    
 <!-- Portfolio Submenus -->
 <div class="submenu submenu-light" id="sub4">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>    
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
+        </p>       
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
 <!-- Page Submenus -->
 <div class="submenu submenu-light" id="sub5">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>     
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
+        </p>        
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>         
     </div>
 </div>    
 <!-- AppStyled Submenus -->
 <div class="submenu submenu-light" id="sub6">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>    
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
+        </p>   
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-settings-strong" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>type de loisir</option>
+        </select>
+        </p>       
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
 <!-- Store Submenus -->
 <div class="submenu submenu-light" id="sub7">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>    
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>    
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
+        </p>   
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-settings-strong" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>type de loisir</option>
+        </select>
+        </p>       
+
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>    
 <!-- News Submenus -->
 <div class="submenu submenu-light" id="sub8">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>    
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>    
+        <p style="
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding-left: 60px;"><i class="ion-ios-home" style="
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+"></i>
+        <select id="#communes" style="
+    width: 135px;
+    height: 30px;
+    overflow: hidden !important;
+" >
+            <option>Commune</option>
+        </select>
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
 <!-- MobileUI Submenus -->
 <div class="submenu submenu-light" id="sub9"> 
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-Fermer-empty"></i><em>Fermer</em></a>     
+        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>     
         <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>          
     </div>
 </div>
