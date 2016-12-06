@@ -16,7 +16,6 @@
 
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
@@ -55,8 +54,16 @@ urlIframe += '&view=fiche" width="100%" height="110%" ></iframe>';
 var storage = window.localStorage;
 storage.setItem('commune', '-1');
 
+$("select").change(function () {
+    var str = "";
+    $(this).find( "option:selected" ).each(function() {
+      str += $( this ).val();
+    });
+    storage.setItem('commune', str);
+});
 
 </script>
+<script type="text/javascript" src="scripts/custom.js"></script>
 
 </head>
 
@@ -150,12 +157,55 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
+                          <option value="Aiguèze">Aiguèze</option>
+                          <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
+                          <option value="Barjac">Barjac</option>
+                          <option value="Bollène">Bollène</option>
+                          <option value="Carsan">Carsan</option>
+                          <option value="Cavillargues">Cavillargues</option>
+                          <option value="Chusclan">Chusclan</option>
+                          <option value="Codolet">Codolet</option>
+                          <option value="Colombier-Sabran">Colombier-Sabran</option>
+                          <option value="Connaux">Connaux</option>
+                          <option value="Cornillon">Cornillon</option>
+                          <option value="Gaujac">Gaujac</option>
+                          <option value="Goudargues">Goudargues</option>
+                          <option value="Issirac">Issirac</option>
+                          <option value="La-Roque-sur-Cèze">La-Roque-sur-Cèze</option>
+                          <option value="Laudun">Laudun</option>
+                          <option value="Le Garn">Le Garn</option>
+                          <option value="Le Pin">Le Pin</option>
+                          <option value="Lussan">Lussan</option>
+                          <option value="Mondragon">Mondragon</option>
+                          <option value="Montclus">Montclus</option>
+                          <option value="Méjannes-le-Clap">Méjannes-le-Clap</option>
+                          <option value="Pont-Saint-Esprit">Pont-Saint-Esprit</option>
+                          <option value="Sabran">Sabran</option>
+                          <option value="Saint-André-d'Olérargues">Saint-André-d'Olérargues</option>
+                          <option value="Saint-André-de-Roquepertuis">Saint-André-de-Roquepertuis</option>
+                          <option value="Saint-Geniès-de-Comolas">Saint-Geniès-de-Comolas</option>
+                          <option value="Saint-Gervais">Saint-Gervais</option>
+                          <option value="Saint-Julien-de-Peyrolas">Saint-Julien-de-Peyrolas</option>
+                          <option value="Saint-Just-d'Ardèche">Saint-Just-d'Ardèche</option>
+                          <option value="Saint-Laurent-de-Carnols">Saint-Laurent-de-Carnols</option>
+                          <option value="Saint-Laurent-des-Arbres">Saint-Laurent-des-Arbres</option>
+                          <option value="Saint-Marcel-de-Careiret">Saint-Marcel-de-Careiret</option>
+                          <option value="Saint-Martin-d'Ardèche">Saint-Martin-d'Ardèche</option>
+                          <option value="Saint-Michel-d'Euzet">Saint-Michel-d'Euzet</option>
+                          <option value="Saint-Paulet-de-Caisson">Saint-Paulet-de-Caisson</option>
+                          <option value="Saint-Pons-la-Calm">Saint-Pons-la-Calm</option>
+                          <option value="Saint-Privat-de-Champclos">Saint-Privat-de-Champclos</option>
+                          <option value="Saint-Victor-la-Coste">Saint-Victor-la-Coste</option>
+                          <option value="Tavel">Tavel</option>
+                          <option value="Tresques">Tresques</option>
+                          <option value="Verfeuil">Verfeuil</option>
+                          <option value="Vénéjan">Vénéjan</option>
         </select>
         </p>   
         <!-- <a href="#" onclick="initIframe('hbergement', '-1');">><i class="ion-android-search"></i><em>Tous</em></a>  -->  
@@ -184,12 +234,12 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
         </select>
         </p>       
         <a href="iframe.html?property_type=restauration&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>           
@@ -212,12 +262,12 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
         </select>
         </p>        
         <a href="iframe.html?property_type=dcouvrir&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>         
@@ -240,12 +290,12 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
         </select>
         </p>   
         <p style="
@@ -261,7 +311,7 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
@@ -289,12 +339,12 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
         </select>
         </p>   
         <p style="
@@ -310,7 +360,7 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
@@ -339,12 +389,12 @@ storage.setItem('commune', '-1');
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="#communes" style="
+        <select id="communes" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>Commune</option>
+            <option value="-1">Commune</option>
         </select>
         <a href="iframe.html?property_type=port&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>   
     </div>

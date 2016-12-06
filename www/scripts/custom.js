@@ -2,6 +2,16 @@ $(document).ready(function () {
             
     function init_template(){//Class is vital to run AJAX Pages 
             
+
+$("select").change(function () {
+    var str = "";
+    $(this).find( "option:selected" ).each(function() {
+      str += $( this ).val();
+    });
+    storage.setItem('commune', str);
+});
+
+            
         $('.open-sidebar').click(function(){
             $('.close-sidebar-mask').addClass('pointer-events');
             $('.sidebar-menu').toggleClass('active-submenu');
