@@ -17,6 +17,23 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" >
+	function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace( 
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;	
+	}
+	return vars;
+}
+</script>
+
 </head>
 
 <body>
@@ -47,9 +64,9 @@
 <!-- Main Small Icon Sidebar -->
 <div class="sidebar-menu sidebar-light">
     <div class="sidebar-menu-scroll">
-        <a class="current-menu" href="index.html"><i class="ion-ios-home-outline"></i><em>Accueil</em></a>       
+        <a class="current-menu" href="index.html"><i class="ion-ios-home-outline"></i><em>Accueil</em></a>   
+        <a data-submenus="sub0" href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>           
         <!-- <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>
-        <a data-submenus="sub0" href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>       
 
 
         <a data-submenus="sub2" href="#"><i class="ion-ios-home"></i><em>Villages</em></a>      -->
@@ -124,15 +141,16 @@
             <option>Commune</option>
         </select>
         </p>   
-        <a href=""><i class="ion-android-search"></i><em>Tous</em></a>    
-        <a href="#"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Hôtels</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>       
-        <a href="#"><i class="ion-android-search"></i><em>Campings</em></a>        
+        <a href="iframe.html?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
+        <a href="iframe.html?property_type=hbergement&typeh=Résidences+de+tourisme&commune=-1"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="iframe.html?property_type=hbergement&typeh=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
+        <a href="iframe.html?property_type=hbergement&typeh=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
+        <a href="iframe.html?property_type=hbergement&typeh=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
+        <a href="iframe.html?property_type=hbergement&typeh=Chambres+d’hôtes&commune=-1"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>               
+        <a href="iframe.html?property_type=hbergement&typeh=Campings&commune=-1"><i class="ion-android-search"></i><em>Campings</em></a>        
     </div>
 </div>    
-<!-- Portfolio Submenus -->
+<!-- Restauration Submenus -->
 <div class="submenu submenu-light" id="sub4">
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
@@ -157,10 +175,10 @@
             <option>Commune</option>
         </select>
         </p>       
-        <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="iframe.html?property_type=restauration&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
-<!-- Page Submenus -->
+<!-- Caves Submenus -->
 <div class="submenu submenu-light" id="sub5">
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
@@ -185,10 +203,10 @@
             <option>Commune</option>
         </select>
         </p>        
-        <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>         
+        <a href="iframe.html?property_type=dcouvrir&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>         
     </div>
 </div>    
-<!-- AppStyled Submenus -->
+<!-- Loisir activits_loisir Submenus -->
 <div class="submenu submenu-light" id="sub6">
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>
@@ -234,10 +252,10 @@
             <option>type de loisir</option>
         </select>
         </p>       
-        <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="iframe.html?property_type=activits_loisir&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
-<!-- Store Submenus -->
+<!-- commerces Submenus -->
 <div class="submenu submenu-light" id="sub7">
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>    
@@ -280,14 +298,14 @@
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>type de loisir</option>
+            <option>type de commerce</option>
         </select>
         </p>       
 
-        <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="iframe.html?property_type=commerces&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>              
     </div>
 </div>    
-<!-- News Submenus -->
+<!-- Port Submenus -->
 <div class="submenu submenu-light" id="sub8">
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>    
@@ -311,7 +329,7 @@
 " >
             <option>Commune</option>
         </select>
-        <a href="#"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="iframe.html?property_type=port&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>   
     </div>
 </div>
 <!-- MobileUI Submenus -->
@@ -322,12 +340,13 @@
     </div>
 </div>
 
+
 <div class="bg bg-full bg-cover"></div>
             
 <div id="page-content" class="page-content header-clear bg bg-cover bg-transparent" style="z-index: 100;">
 
     <div id="page-content-scroll">        
-    <iframe src="http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10&wpp_search%5Bstrict_search%5D=false&wpp_search%5Bproperty_type%5D=hbergement&wpp_search%5Blocalisation%5D=-1&wpp_search%5Bcommune%5D=-1&wpp_search%5Btype_hebergement%5D%5B0%5D=Campings&wpp_search%5Badherant_ot%5D=true" width="100%" height="110%"></iframe>
+    <iframe id="iframe" src="http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10&wpp_search%5Bstrict_search%5D=false&wpp_search%5Bproperty_type%5D=hbergement&wpp_search%5Blocalisation%5D=-1&wpp_search%5Bcommune%5D=-1&wpp_search%5Btype_hebergement%5D%5B0%5D=Campings&wpp_search%5Badherant_ot%5D=true&view=fiche" width="100%" height="110%"></iframe>
 
         
     </div>  
@@ -366,4 +385,23 @@
  
     
 </div>
+
+<script type="text/javascript" >
+	
+var propertyType 	= $_GET("property_type");
+var commune 		= $_GET("commune");
+var type 			= $_GET("typeh");
+var urlIframe = "http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10000&wpp_search%5Bstrict_search%5D=false" ;
+urlIframe += "&wpp_search%5Bproperty_type%5D="+propertyType;
+urlIframe += "&wpp_search%5Blocalisation%5D=-1";
+urlIframe += "&wpp_search%5Bcommune%5D="+commune;
+urlIframe += "&wpp_search%5Badherant_ot%5D=true";
+if (type != null) {
+	urlIframe += "&wpp_search%5Btype_hebergement%5D%5B0%5D="+type;
+}
+urlIframe += "&view=fiche";
+
+document.getElementById('iframe').src = urlIframe;
+
+</script>
 </body>
