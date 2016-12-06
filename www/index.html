@@ -117,7 +117,11 @@
         </select>
         </p>   
         <a href="iframe.html?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
-        <a href="iframe.html?property_type=hbergement&typeh=Résidences+de+tourisme&commune=-1"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="iframe.html" onclick="
+        localStorage.property_type  = 'hbergement';
+        localStorage.typeh          = 'Résidences+de+tourisme';
+        localStorage.commune        = '-1';
+        "><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
