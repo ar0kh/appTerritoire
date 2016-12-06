@@ -21,8 +21,10 @@
 
 <script type="text/javascript">
 
-function initIframe(propertyType,typeh,commune) {
-   
+function initIframe(propertyType,typeh) {
+
+var commune = storage.getItem('commune');
+
 var urlIframe = '<iframe id="iframe" src="http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10000&wpp_search%5Bstrict_search%5D=false' ;
 urlIframe += "&wpp_search%5Bproperty_type%5D="+propertyType;
 urlIframe += "&wpp_search%5Blocalisation%5D=-1";
@@ -36,7 +38,7 @@ urlIframe += '&view=fiche" width="100%" height="110%" ></iframe>';
 };
 
 var storage = window.localStorage;
-
+storage.setItem('commune', '-1');
 
 
 </script>
@@ -65,7 +67,7 @@ var storage = window.localStorage;
 <div class="sidebar-menu sidebar-light">
     <div class="sidebar-menu-scroll">
         <a class="current-menu" href="index.html"><i class="ion-ios-home-outline"></i><em>Accueil</em></a>   
-        <a data-submenus="sub0" href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>           
+        <a href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>           
         <!-- <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>
 
 
@@ -141,13 +143,13 @@ var storage = window.localStorage;
             <option>Commune</option>
         </select>
         </p>   
-        <a href="iframe.html?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
-        <a href="#" onclick="initIframe('hbergement', 'Résidences+de+tourisme', '-1');"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
-        <a href="iframe.html?property_type=hbergement&typeh=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
-        <a href="iframe.html?property_type=hbergement&typeh=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
-        <a href="iframe.html?property_type=hbergement&typeh=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
-        <a href="iframe.html?property_type=hbergement&typeh=Chambres+d’hôtes&commune=-1"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>               
-        <a href="iframe.html?property_type=hbergement&typeh=Campings&commune=-1"><i class="ion-android-search"></i><em>Campings</em></a>        
+        <!-- <a href="#" onclick="initIframe('hbergement', '-1');">><i class="ion-android-search"></i><em>Tous</em></a>  -->  
+        <a href="#" onclick="initIframe('hbergement', 'Résidences+de+tourisme');"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="#" onclick="initIframe('hbergement', 'Hôtels');"><i class="ion-android-search"></i><em>Hôtels</em></a>       
+        <a href="#" onclick="initIframe('hbergement', 'Gîtes%2FMeublés');"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
+        <a href="#" onclick="initIframe('hbergement', 'Gîtes+d%5C%27étape');"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
+        <a href="#" onclick="initIframe('hbergement', 'Chambres+d’hôtes');"><i class="ion-android-search"></i><em>Chambres d’hôtes</em></a>               
+        <a href="#" onclick="initIframe('hbergement', 'Campings');"><i class="ion-android-search"></i><em>Campings</em></a>        
     </div>
 </div>    
 <!-- Restauration Submenus -->
