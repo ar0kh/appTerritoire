@@ -13,9 +13,16 @@
 <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+    var storage = window.localStorage;
+</script>
+
 </head>
 
 <body>
@@ -117,7 +124,11 @@
         </select>
         </p>   
         <a href="iframe.html?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
-        <a href="iframe.html?property_type=hbergement&typeh=Résidences+de+tourisme&commune=-1"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="iframejs.html" onclick="
+        storage.setItem(property_type, 'hbergement');
+        storage.setItem(typeh, 'Résidences+de+tourisme');
+        storage.setItem(commune, '-1');
+        "><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
@@ -435,4 +446,7 @@
  
     
 </div>
+
+
+
 </body>
