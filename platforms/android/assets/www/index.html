@@ -20,7 +20,25 @@
 <script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
-    var storage = window.localStorage;
+
+function initIframe(propertyType,typeh,commune) {
+   
+var urlIframe = '<iframe id="iframe" src="http://tourisme.gardrhodanien.media/property/?wpp_search%5Btamp%5D=1&wpp_search%5Bsort_order%5D=ASC&wpp_search%5Bsort_by%5D=commune&wpp_search%5Bpagination%5D=on&wpp_search%5Bper_page%5D=10000&wpp_search%5Bstrict_search%5D=false' ;
+urlIframe += "&wpp_search%5Bproperty_type%5D="+propertyType;
+urlIframe += "&wpp_search%5Blocalisation%5D=-1";
+urlIframe += "&wpp_search%5Bcommune%5D="+commune;
+urlIframe += "&wpp_search%5Badherant_ot%5D=true";
+if (typeh != null) {
+    urlIframe += "&wpp_search%5Btype_hebergement%5D%5B0%5D="+typeh;
+}
+urlIframe += '&view=fiche" width="100%" height="110%" ></iframe>';
+    document.getElementById("page-content-scroll").innerHTML = urlIframe;
+};
+
+var storage = window.localStorage;
+
+
+
 </script>
 
 </head>
@@ -124,11 +142,7 @@
         </select>
         </p>   
         <a href="iframe.html?property_type=hbergement&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>    
-        <a href="iframejs.html" onclick="
-        storage.setItem(property_type, 'hbergement');
-        storage.setItem(typeh, 'Résidences+de+tourisme');
-        storage.setItem(commune, '-1');
-        "><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
+        <a href="#" onclick="initIframe('hbergement', 'Résidences+de+tourisme', '-1');"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Hôtels&commune=-1"><i class="ion-android-search"></i><em>Hôtels</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes%2FMeublés&commune=-1"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
         <a href="iframe.html?property_type=hbergement&typeh=Gîtes+d%5C%27étape&commune=-1"><i class="ion-android-search"></i><em>Gîtes d’étape</em></a>    
