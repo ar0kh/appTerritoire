@@ -147,6 +147,7 @@ $("select").change(function () {
         <p style="height: 60px;margin: 0;line-height: 60px;padding-left: 60px;"><i class="ion-ios-home" style="height: 60px;width: 60px;position: absolute;left: 0px;font-size: 20px;line-height: 60px;text-align: center;"></i>
         <select id="communes" style="width: 135px;height: 30px;overflow: hidden !important;" >
             <option value="-1">Commune</option>
+            <option value="-1">Tous</option>
             <option value="Aiguèze">Aiguèze</option>
             <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
             <option value="Barjac">Barjac</option>
@@ -224,9 +225,28 @@ $("select").change(function () {
     overflow: hidden !important;
 " >
             <option value="-1">Commune</option>
+            <option value="-1">Tous</option>
+                          <option value="Aiguèze">Aiguèze</option>
+                          <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
+                          <option value="Barjac">Barjac</option>
+                          <option value="Connaux">Connaux</option>
+                          <option value="Cornillon">Cornillon</option>
+                          <option value="Goudargues">Goudargues</option>
+                          <option value="Issirac">Issirac</option>
+                          <option value="L'Ardoise">L'Ardoise</option>
+                          <option value="La-Roque-sur-Cèze">La-Roque-sur-Cèze</option>
+                          <option value="Laudun">Laudun</option>
+                          <option value="Montclus">Montclus</option>
+                          <option value="Saint-Alexandre">Saint-Alexandre</option>
+                          <option value="Saint-André-de-Roquepertuis">Saint-André-de-Roquepertuis</option>
+                          <option value="Saint-Martin-d'Ardèche">Saint-Martin-d'Ardèche</option>
+                          <option value="Tavel">Tavel</option>
+                          <option value="Verfeuil">Verfeuil</option>
+                          <option value="Villeneuve-les-Avignon">Villeneuve-les-Avignon</option>
+                      
         </select>
         </p>       
-        <a href="iframe.html?property_type=restauration&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="#" onclick="initIframe('restauration', null);"><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
 <!-- Caves Submenus -->
@@ -252,9 +272,23 @@ $("select").change(function () {
     overflow: hidden !important;
 " >
             <option value="-1">Commune</option>
+                        <option value="-1">Tous</option>
+                          <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
+                          <option value="Cornillon">Cornillon</option>
+                          <option value="Laudun-l'Ardoise">Laudun-l'Ardoise</option>
+                          <option value="Lirac">Lirac</option>
+                          <option value="Pont-Saint-Esprit">Pont-Saint-Esprit</option>
+                          <option value="Sabran">Sabran</option>
+                          <option value="Saint-André-d'Olérargues">Saint-André-d'Olérargues</option>
+                          <option value="Saint-Geniès-de-Comolas">Saint-Geniès-de-Comolas</option>
+                          <option value="Saint-Gervais">Saint-Gervais</option>
+                          <option value="Saint-Julien-de-Peyrolas">Saint-Julien-de-Peyrolas</option>
+                          <option value="Saint-Marcel-de-Careiret">Saint-Marcel-de-Careiret</option>
+                          <option value="Tavel">Tavel</option>
+                          <option value="Tresques">Tresques</option>
         </select>
         </p>        
-        <a href="iframe.html?property_type=dcouvrir&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>         
+        <a  href="#" onclick="initIframe('dcouvrir', null);" ><i class="ion-android-search"></i><em>Tous</em></a>         
     </div>
 </div>    
 <!-- Loisir activits_loisir Submenus -->
@@ -280,6 +314,30 @@ $("select").change(function () {
     overflow: hidden !important;
 " >
             <option value="-1">Commune</option>
+            <option value="-1">Tous</option>
+                          <option value="Aiguèze">Aiguèze</option>
+                          <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
+                          <option value="Berrias">Berrias</option>
+                          <option value="Bidon">Bidon</option>
+                          <option value="Bollène">Bollène</option>
+                          <option value="Cornillon">Cornillon</option>
+                          <option value="Courry">Courry</option>
+                          <option value="Goudargues">Goudargues</option>
+                          <option value="La-Garde-Adhémar">La-Garde-Adhémar</option>
+                          <option value="La-Roque-sur-Cèze">La-Roque-sur-Cèze</option>
+                          <option value="Lirac">Lirac</option>
+                          <option value="Mialet">Mialet</option>
+                          <option value="Méjannes-le-Clap">Méjannes-le-Clap</option>
+                          <option value="Nîmes">Nîmes</option>
+                          <option value="Orgnac-l'Aven">Orgnac-l'Aven</option>
+                          <option value="Pont-Saint-Esprit">Pont-Saint-Esprit</option>
+                          <option value="Roquemaure">Roquemaure</option>
+                          <option value="Saint-Julien-de-Peyrolas">Saint-Julien-de-Peyrolas</option>
+                          <option value="Saint-Martin-d'Ardèche">Saint-Martin-d'Ardèche</option>
+                          <option value="Saint-Privat-de-Champclos">Saint-Privat-de-Champclos</option>
+                          <option value="Saint-Remèze">Saint-Remèze</option>
+                          <option value="Seynes">Seynes</option>
+                          <option value="Vallon-Pont-d'Arc">Vallon-Pont-d'Arc</option>
         </select>
         </p>   
         <p style="
@@ -295,15 +353,32 @@ $("select").change(function () {
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="communes" style="
+        <select id="loisir" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>type de loisir</option>
+            <option value="-1">type de loisir</option>
+            <option value="-1">Tous</option>
+                          <option value="Activités parapente">Activités parapente</option>
+                          <option value="Activités équestres">Activités équestres</option>
+                          <option value="Activités nature">Activités nature</option>
+                          <option value="Activités nautiques">Activités nautiques</option>
+                          <option value="Activités sportives">Activités sportives</option>
+                          <option value="Animaux">Animaux</option>
+                          <option value="Bibliothèques Médiathèques">Bibliothèques Médiathèques</option>
+                          <option value="Grottes">Grottes</option>
+                          <option value="Guides conférenciers">Guides conférenciers</option>
+                          <option value="Jeux">Jeux</option>
+                          <option value="Musées">Musées</option>
+                          <option value="Œnotourisme">Œnotourisme</option>
+                          <option value="Patinoires">Patinoires</option>
+                          <option value="Patrimoine">Patrimoine</option>
+                          <option value="Piscines">Piscines</option>
+                          <option value="Location vélos">Location vélos</option>
         </select>
         </p>       
-        <a href="iframe.html?property_type=activits_loisir&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a  href="#" onclick="initIframe('activits_loisir', null);" ><i class="ion-android-search"></i><em>Tous</em></a>           
     </div>
 </div>
 <!-- commerces Submenus -->
@@ -329,6 +404,20 @@ $("select").change(function () {
     overflow: hidden !important;
 " >
             <option value="-1">Commune</option>
+            <option value="-1">Tous</option>
+                          <option value="Bagnols-sur-Cèze">Bagnols-sur-Cèze</option>
+                          <option value="Goudargues">Goudargues</option>
+                          <option value="Laudun-L'Ardoise">Laudun-L'Ardoise</option>
+                          <option value="Lussan">Lussan</option>
+                          <option value="Montclus">Montclus</option>
+                          <option value="Pont-Saint-Esprit">Pont-Saint-Esprit</option>
+                          <option value="Saint-André-de-Roquepertuis">Saint-André-de-Roquepertuis</option>
+                          <option value="Saint-Michel-d'Euzet">Saint-Michel-d'Euzet</option>
+                          <option value="Saint-Paulet-de-Caisson">Saint-Paulet-de-Caisson</option>
+                          <option value="Verfeuil">Verfeuil</option>
+                          <option value="Villeneuve-les-Avignon">Villeneuve-les-Avignon</option>
+                 
+                      
         </select>
         </p>   
         <p style="
@@ -344,16 +433,32 @@ $("select").change(function () {
     line-height: 60px;
     text-align: center;
 "></i>
-        <select id="communes" style="
+        <select id="commerces" style="
     width: 135px;
     height: 30px;
     overflow: hidden !important;
 " >
-            <option>type de commerce</option>
+            <option value="-1">type de commerce</option><option value="-1">Tous</option>
+                          <option value="Agence Immobilière">Agence Immobilière</option>
+                          <option value=" Artisanat"> Artisanat</option>
+                          <option value=" Bien-être"> Bien-être</option>
+                          <option value=" Blanchisserie"> Blanchisserie</option>
+                          <option value=" Boulangerie"> Boulangerie</option>
+                          <option value=" Cadeaux - Souvenirs"> Cadeaux - Souvenirs</option>
+                          <option value=" Commerce de détail"> Commerce de détail</option>
+                          <option value=" Confiserie - Glacier"> Confiserie - Glacier</option>
+                          <option value=" Gardiennage Caravanes"> Gardiennage Caravanes</option>
+                          <option value=" Huile d'Olive"> Huile d'Olive</option>
+                          <option value=" Location Salles"> Location Salles</option>
+                          <option value=" Location Véhicules"> Location Véhicules</option>
+                          <option value=" Produits du Terroir"> Produits du Terroir</option>
+                          <option value=" Services"> Services</option>
+                          <option value=" Supermarchés"> Supermarchés</option>
+                   
         </select>
         </p>       
 
-        <a href="iframe.html?property_type=commerces&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>              
+        <a  href="#" onclick="initIframe('commerces', null);" ><i class="ion-android-search"></i><em>Tous</em></a>              
     </div>
 </div>    
 <!-- Port Submenus -->
@@ -379,15 +484,17 @@ $("select").change(function () {
     overflow: hidden !important;
 " >
             <option value="-1">Commune</option>
+            <option value="-1">Tous</option>
+            <option value="L'Ardoise">L'Ardoise</option>
         </select>
-        <a href="iframe.html?property_type=port&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>   
+        <a href="#" onclick="initIframe('port', null);" ><i class="ion-android-search"></i><em>Tous</em></a>   
     </div>
 </div>
 <!-- MobileUI Submenus -->
 <div class="submenu submenu-light" id="sub9"> 
     <div class="submenu-scroll">
         <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>     
-        <a href="iframe.html?property_type=balades&commune=-1"><i class="ion-android-search"></i><em>Tous</em></a>  
+        <a  href="#" onclick="initIframe('balades', null);" ><i class="ion-android-search"></i><em>Tous</em></a>  
     </div>
 </div>
 
