@@ -113,8 +113,8 @@ $("select#tcommer").change(function () {
 <div class="sidebar-menu sidebar-light">
     <div class="sidebar-menu-scroll">
         <a class="current-menu" href="index.html"><i class="ion-ios-home-outline"></i><em>Accueil</em></a>   
-        <a href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>           
-        <!-- <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>
+        <!-- <a href="#"><i class="ion-android-calendar"></i><em>Agenda</em></a>           
+         <a data-submenus="sub1" href="#"><i class="ion-social-rss"></i><em>Actualités</em></a>
 
 
         <a data-submenus="sub2" href="#"><i class="ion-ios-home"></i><em>Villages</em></a>      -->
@@ -166,8 +166,7 @@ $("select#tcommer").change(function () {
 </div>    -->
 <!-- Hebergement Submenus -->    
 <div class="submenu submenu-light" id="sub3">
-    <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>        
+    <div class="submenu-scroll">    
         <p style="height: 60px;margin: 0;line-height: 60px;padding-left: 60px;"><i class="ion-ios-home" style="height: 60px;width: 60px;position: absolute;left: 0px;font-size: 20px;line-height: 60px;text-align: center;"></i>
         <select id="communes" style="width: 135px;height: 30px;overflow: hidden !important;" >
             <option value="-1">Commune</option>
@@ -217,7 +216,7 @@ $("select#tcommer").change(function () {
             <option value="Vénéjan">Vénéjan</option>
         </select>
         </p>   
-        <!-- <a href="#" onclick="initIframe('hbergement', '-1');">><i class="ion-android-search"></i><em>Tous</em></a>  -->  
+        <!-- <a href="#" onclick="initIframe('hbergement', '-1');">><i class="ion-android-search"></i><em>Rechercher</em></a>  -->  
         <a href="#" onclick="initIframe('hbergement', 'Résidences+de+tourisme');"><i class="ion-android-search"></i><em>Résidences de tourisme</em></a>       
         <a href="#" onclick="initIframe('hbergement', 'Hôtels');"><i class="ion-android-search"></i><em>Hôtels</em></a>       
         <a href="#" onclick="initIframe('hbergement', 'Gîtes%2FMeublés');"><i class="ion-android-search"></i><em>Gîtes/Meublés</em></a>       
@@ -270,7 +269,7 @@ $("select#tcommer").change(function () {
                       
         </select>
         </p>       
-        <a href="#" onclick="initIframe('restauration', null);"><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a href="#" onclick="initIframe('restauration', null);"><i class="ion-android-search"></i><em>Rechercher</em></a>           
     </div>
 </div>
 <!-- Caves Submenus -->
@@ -312,7 +311,7 @@ $("select#tcommer").change(function () {
                           <option value="Tresques">Tresques</option>
         </select>
         </p>        
-        <a  href="#" onclick="initIframe('dcouvrir', null);" ><i class="ion-android-search"></i><em>Tous</em></a>         
+        <a  href="#" onclick="initIframe('dcouvrir', null);" ><i class="ion-android-search"></i><em>Rechercher</em></a>         
     </div>
 </div>    
 <!-- Loisir activits_loisir Submenus -->
@@ -402,7 +401,7 @@ $("select#tcommer").change(function () {
                           <option value="Location vélos">Location vélos</option>
         </select>
         </p>       
-        <a  href="#" onclick="initIframe('activits_loisir', null);" ><i class="ion-android-search"></i><em>Tous</em></a>           
+        <a  href="#" onclick="initIframe('activits_loisir', null);" ><i class="ion-android-search"></i><em>Rechercher</em></a>           
     </div>
 </div>
 <!-- commerces Submenus -->
@@ -482,13 +481,12 @@ $("select#tcommer").change(function () {
         </select>
         </p>       
 
-        <a  href="#" onclick="initIframe('commerces', null);" ><i class="ion-android-search"></i><em>Tous</em></a>              
+        <a  href="#" onclick="initIframe('commerces', null);" ><i class="ion-android-search"></i><em>Rechercher</em></a>              
     </div>
 </div>    
 <!-- Port Submenus -->
 <div class="submenu submenu-light" id="sub8">
     <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>    
         <p style="
     height: 60px;
     margin: 0;
@@ -511,14 +509,13 @@ $("select#tcommer").change(function () {
             <option value="-1">Tous</option>
             <option value="L'Ardoise">L'Ardoise</option>
         </select>
-        <a href="#" onclick="initIframe('port', null);" ><i class="ion-android-search"></i><em>Tous</em></a>   
+        <a href="#" onclick="initIframe('port', null);" ><i class="ion-android-search"></i><em>Rechercher</em></a>   
     </div>
 </div>
 <!-- MobileUI Submenus -->
 <div class="submenu submenu-light" id="sub9"> 
-    <div class="submenu-scroll">
-        <a class="close-sidebar" href="#"><i class="ion-ios-close-empty"></i><em>Fermer</em></a>     
-        <a  href="#" onclick="initIframe('balades', null);" ><i class="ion-android-search"></i><em>Tous</em></a>  
+    <div class="submenu-scroll"> 
+        <a  href="#" onclick="initIframe('balades', null);" ><i class="ion-android-search"></i><em>Rechercher</em></a>  
     </div>
 </div>
 
@@ -549,12 +546,12 @@ $("select#tcommer").change(function () {
                         <a href="#">
                             <i class="ion-ios-home  border-blue-dark"></i><em>Villages</em>
                         </a>
-                    </li>        -->
+                    </li>        
                     <li>
-                        <a href="iframe.html">
+                        <a href="#">
                             <i class="ion-android-calendar  border-blue-dark"></i><em>Agenda</em>
                         </a>
-                    </li>      
+                    </li>      -->
                     <li>
                         <a href="#">
                             <i class="ion-ios-moon  border-blue-dark"></i><em>Hébergements</em>
