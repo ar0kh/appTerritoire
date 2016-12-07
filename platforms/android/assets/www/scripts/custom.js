@@ -3,12 +3,27 @@ $(document).ready(function () {
     function init_template(){//Class is vital to run AJAX Pages 
             
 
-$("select").change(function () {
+
+$("select#communes").change(function () {
     var str = "";
     $(this).find( "option:selected" ).each(function() {
       str += $( this ).val();
     });
     storage.setItem('commune', str);
+});
+$("select#tloisir").change(function () {
+    var str = "";
+    $(this).find( "option:selected" ).each(function() {
+      str += $( this ).val();
+    });
+    storage.setItem('tloisir', str);
+});
+$("select#tcommer").change(function () {
+    var str = "";
+    $(this).find( "option:selected" ).each(function() {
+      str += $( this ).val();
+    });
+    storage.setItem('tcommer', str);
 });
 
             
@@ -19,6 +34,8 @@ $("select").change(function () {
             $('.open-sidebar .line-1').toggleClass('line-1-active');
             $('.open-sidebar .line-2').toggleClass('line-2-active');
             $('.open-sidebar .line-3').toggleClass('line-3-active');
+
+
         });
         
         $('.close-sidebar-mask').click(function(){
@@ -48,6 +65,10 @@ $("select").change(function () {
             } else {
                 $('#page-content').toggleClass('active-content');
             }
+            
+            storage.setItem('commune', '-1');
+            storage.setItem('tloisir', '-1');
+            storage.setItem('tcommer', '-1');
         });
     
         $('a[data-submenus]').click(function(){
