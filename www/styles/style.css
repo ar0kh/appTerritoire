@@ -545,7 +545,9 @@ body{
     background: url('../img/load.svg') no-repeat 50% 50% transparent ;
 }
 
-
+.portfolio-wide-item {
+    background: white;
+}
 
 
 
